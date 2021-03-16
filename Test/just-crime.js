@@ -18,12 +18,20 @@ var newtry = "https://opendata.arcgis.com/datasets/56a0d46ae5f141269f2598a8c07e2
 d3.json(newtry, function(response) {
 
   console.log(response);
+  console.log(response.features)
 
-  for (var i = 0; i < response.length; i++) {
-    var location = response[i].geometry;
+  for (var i = 0; i < 101; i++) {
+
+    var location = response.features[i].geometry
+    console.log(location)
       if (location) {
         L.marker([location.coordinates[1], location.coordinates[0]]).addTo(myMap);
       }
 }
+  // L.geoJson(response, {
+  //   pointsToLayer: function (feature, latlng) {
+  //     return L.circleMarker (latlng)
+  //   }
+  // }).addTo(myMap)
 
 });
