@@ -13,7 +13,7 @@ var myMap = L.map("map", {
     accessToken: API_KEY
   }).addTo(myMap);
   
-  var newtry = "https://data.sfgov.org/resource/cuks-n6tp.json?$limit=1000";
+  var newtry = "https://opendata.arcgis.com/datasets/af500b5abb7240399853b35a2362d0c0_0.geojson";
   
   d3.json(newtry, function(response) {
   
