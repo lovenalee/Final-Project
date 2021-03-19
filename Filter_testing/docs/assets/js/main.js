@@ -54,45 +54,39 @@ $(document).ready(function() {
         accessToken: "pk.eyJ1IjoiamltdHJhbjQ4MCIsImEiOiJja21jbG56eTMyMGNxMnhzOWp3Y241bnA0In0.EBMOsiDFPZaIiGk-PB84Ow"
         }).addTo(simpleUsageMap);
 
-
+       
         var newtry = "https://opendata.arcgis.com/datasets/56a0d46ae5f141269f2598a8c07e25c1_0.geojson?$limit=1000";
 
         d3.json(newtry, function(response) {
         
-          console.log(response);
-          console.log(response.features)
+         //console.log(response);
+         // console.log(response.features)
           
         
           for (var i = 0; i < 101; i++) {
         
             var location = response.features[i].geometry
             var prop = response.features[i].properties
+
             console.log(location)
             console.log(prop)
+
               if (location) {
                   year = prop.occurrenceyear
                   console.log(year)
-                var marker = L.marker([location.coordinates[1], location.coordinates[0]], { tags: year }).addTo(simpleUsageMap).bindPopup(year);
+
+                var marker = L.marker([location.coordinates[1], location.coordinates[0]], { tags: [year.toString()] }).addTo(simpleUsageMap).bindPopup(year.toString());
               }
         }
-          // L.geoJson(response, {
-          //   pointsToLayer: function (feature, latlng) {
-          //     return L.circleMarker (latlng)
-          //   }
-          // }).addTo(myMap)
+      
         
-       
+    //console.log(marker)
         
-
-
-    var fastMarker = L.marker([36.8963965256, 30.7087719440], { tags: ['fast'] }).addTo(simpleUsageMap).bindPopup('fast'); 
-    var slowMarker = L.marker([36.8967740487, 30.7107782364], { tags: ['slow'] }).addTo(simpleUsageMap).bindPopup('slow');
-    var bothMarker = L.marker([36.8881768737, 30.7024331594], { tags: ['fast', 'slow'] }).addTo(simpleUsageMap).bindPopup('fast & slow');
 
     //
 
     L.control.tagFilterButton({
-        data: ['2014', '2015', '2016'],
+        data: ["2014", "2015", "2016"],
         icon: '<img src="filter.png">',
         filterOnEveryClick: true
 
