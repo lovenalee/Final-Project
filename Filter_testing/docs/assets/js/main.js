@@ -63,7 +63,7 @@ $(document).ready(function() {
          // console.log(response.features)
           
         
-          for (var i = 0; i < 101; i++) {
+          for (var i = 0; i < 1000; i++) {
         
             var location = response.features[i].geometry
             var prop = response.features[i].properties
