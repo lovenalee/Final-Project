@@ -6,12 +6,27 @@
     <title>TO Crime</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-    <!-- Nucleo Icons -->
     <link href="../static/css/nucleo-icons.css" rel="stylesheet" />
-    <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
-    <!-- Our CSS  -->
     <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="stylesheet" href="../static/css/leaflet.css" />
+    <link rel="stylesheet" href="../static/css/leaflet-easy-button.css" />
+    <link rel="stylesheet" href="../static/css/ripple.min.css" />
+
+    <style>
+      .leaflet-map {
+        height: 500px;
+        width: 100%;
+      }
+      
+      .easy-button-button {
+        display: block !important;
+      }
+      
+      .tag-filter-tags-container {
+        left: 30px;
+      }
+    </style>
 
   </head>
 
@@ -96,30 +111,47 @@
           </div>
         </div>
         <!-- End Navbar -->
-        <div class = "content">
-          <div id="map"></div>
-        </div>
+        <div class="content">
+        <div class="page-wrapper">
+          <div class="doc-wrapper">
+              <div class="container">
+                  <div id="doc-header" class="doc-header text-center">
+                      <h1 class="doc-title"><i class="icon fa fa-filter"></i> Leaflet Tag Filter Button</h1>
+                      <div class="meta"><i class="fa fa-clock-o"></i> Last updated: Apr 5th, 2018</div>
+                      <section id="simple-usage-section" class="doc-section">
+                          <h2 class="section-title">Simple Usage</h2>
+                          <div class="section-block">
+                              <div id="simple-usage-example" class="code-block">
+                          </div>
+                          <div id="simple-usage-map" style="width: 100%; height: 600px"></div>        
+                      </section><!--//simple-usage-section-->
+  
+                  </div><!--//code-block-->
+              </div><!--//section-block-->
+  
+          </div><!--//content-inner-->
+        </div><!--//doc-content-->
+    </div>
+    
       </div>
     </div>  
 
     <!-- API key -->
     <script type="text/javascript" src="../static/js/config.js"></script>
-
-
-    <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js" integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q==" crossorigin=""></script>
-    <!-- D3 CDN -->
     <script src="https://d3js.org/d3.v4.min.js"></script>
-    <!-- JS -->
     <script type="text/javascript" src="../static/js/just-crime.js"></script>
-    <!-- <script type="text/javascript" src="heatmap.js"></script> -->
+    <script type="text/javascript" src="../static/plugins/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="../static/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../static/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="../static/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>                                                                
+    <script type="text/javascript" src="../static/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="../static/js/just-crime.js"></script>
+    <script type="text/javascript" src="../static/js/leaflet.js"></script>
+    <script type="text/javascript" src="../static/js/leaflet-easy-button.js"></script>
+    <script type="text/javascript" src="../static/js/leaflet-tag-filter-button.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
 
-    <!-- Our JavaScript -->
-    <!-- <script type="text/javascript" src="test.js"></script> -->
-
-    <!-- Leaflet heatmap plugin-->
-    <!-- <script type="text/javascript" src="leaflet-heat.js"></script> -->
-    <!-- <script type="text/javascript" src="test.js"></script> -->
     <script>
     
       $(document).ready(function() {
@@ -156,13 +188,7 @@
         });
       });
     </script>
-    <script>
-      $(document).ready(function() {
-        // Javascript method's body can be found in assets/js/demos.js
-        demo.initDashboardPageCharts();
-  
-      });
-    </script>
+
     <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
   
 
