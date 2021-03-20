@@ -87,7 +87,7 @@ $(document).ready(function() {
 
   L.control.tagFilterButton({
       data: ["2014", "2015", "2016"],
-      icon: '<img src="https://visualpharm.com/assets/380/Filled%20Filter-595b40b65ba036ed117d1c25.svg">',
+      icon: "fa-filter",
       filterOnEveryClick: true
 
       
