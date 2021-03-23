@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    Data Analysis
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Nucleo Icons -->
+  <link href="../static/css/nucleo-icons.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="../static/css/style.css" rel="stylesheet" />
+
+</head>
+
+<body class="">
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <a href="./index.html">
+                <i class="tim-icons icon-chart-pie-36"></i>
+                <p>Dashboard</p>
+              </a>
+          </div>
+        </div>
+      </nav>
+      <div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="SEARCH">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <i class="tim-icons icon-simple-remove"></i>
+              </button>
+            </div>
+        </div>
+      </div>
+    </div>
+      <!-- End Navbar -->
+      
+    <div class="row content">
+        <div class="col-sm-12 col-md-8 col-lg-8 card-padding card-padding3"> 
+            <h2 style="color: white; text-align: center; text-shadow: 2px 2px 2px DarkSlateBlue; font-size: 50px">Predicting Trends</h2>
+            <hr class="plots">
+            <img width="760" height="515" src="images/fig1_predictions_chart.png" alt="Predicting Reported Crimes Trend" class="rounded main-image">
+            <hr>
+             <p>The purpose of this project is to attempt to see if there are reported crimes trends in Toronto.  The dataset is extracted from the Toronto Police Services website; from 2014 to 2020.
+                We look at daily reported crimes to see if there are any trends in the reported crimes counts.  We decided to use Facebook Prophet to see if we can predict what the trend could be.
+                
+                First extracted the dataset as a csv than used Pyspark to cleasn the data.  Data cleasing include converting the dates column to datatime format; than drop duplicate records; than lastly
+                we group and count each daily reported crime date to creating a unique record to get columns "ds" and "y" to run Facebook Prophet. Next, the Pyspark data is converted to a Pandas Dataframe
+                and checked for missing values.  The data is than model and the following table show the future values that was charted.</p>
+            <hr>
+            <img width="760" height="515" src="images/prediction_values_table.png" alt="Predictions Values Table" class="rounded main-image">
+            <hr>
+            <p> From fig1. Predictions of Reported Crimes, the light blue depicted by (yhat_lower and yhat_upper) show the uncertainty range of the data while the dark blue (yhat) is the prediction range.  
+                With a few expected outliers and its lower and upper bounds we see the predicted data is close to the actual data with an upward trend.  This suggest the model should be relatively 
+                accuarte pushing the predictions out to future years (2021 and 2022).  
+            </p>       
+        </div>
+
+        <div class="col-sm-12 col-md-8 col-lg-8 card-padding card-padding3"> 
+            <h3 style="color: white; text-align: center; text-shadow: 2px 2px 2px DarkSlateBlue; font-size: 50px">Seasonality Components</h3>
+            <hr class="plots">
+            <img width="760" height="515" src="images/fig2_components_charts.png" alt="Seasonality Components Charts" class="rounded main-image">
+            <hr>
+            <p> Fig2. show the different seasonality components to the daily reported crimes. The first plot further prove the upward trend of the prediction.  Here we see a change in the data in 2017
+                from relatively flat to an increasing trend.  The next plot show daily reported crimes throughout the week.  Interestingly, the plot show there are more reported crimes on Mondays and Fridays;
+                and less on weekends and relatively flat during mid week. The last plot show the seasonality during the year.  Here we see an increasing trend from January to around October with a few valleys
+                around February, September, and October; but peak around November.  Interestingly, there are less reported crimes in the winter months compared to summer months.
+            </p>
+            <hr>                
+        </div>
+
+        <div class="col-sm-12 col-md-8 col-lg-8 card-padding card-padding3"> 
+            <h3 style="color: white; text-align: center; text-shadow: 2px 2px 2px DarkSlateBlue; font-size: 50px">Data Changepoints</h3>
+            <hr class="plots">
+            <img width="760" height="515" src="images/fig3_changepoints_chart.png" alt="Changepoint Chart" class="rounded main-image">
+            <hr>
+            <p> Data changepoints is a function in Prophet that is used to indicate where the actual data changes direction from a flatter to increasing/decreasing range.  
+                Fig3. the dotted verticle lines show a flat range of reported crimes from 2014 to 2017; than begin to increase at around 2018. While the solid line show this flat to upward trend.
+            </p>
+            <hr>                
+        </div>
+
+        <div class="col-sm-12 col-md-8 col-lg-8 card-padding card-padding3"> 
+            <h3 style="color: white; text-align: center; text-shadow: 2px 2px 2px DarkSlateBlue; font-size: 50px">Comparing Trends</h3>
+            <hr class="plots">
+            <img width="760" height="515" src="images/fig4_actual_vs_predictions_chart.png" alt="Actual vs Predictions" class="rounded main-image">
+            <hr>
+                <p> Lastly, we want to visualize the actual data vs the predicted and see if it is a good model.  Fig4. show the comparison between the yearly actuals to the yearly predictions
+                    from.  The chart show that the predictions orange lines are within the actual blue lines and the upward trend after 2017.  This model appear to be a good fit of the data.
+                </p>
+            <hr>                
+        </div>
+
+    </div>
+
+      <footer class="footer">
+
+      </footer>
+    </div>
+  </div>
+  
+  <script>
+    
+    $(document).ready(function() {
+      $().ready(function() {
+        $sidebar = $('.sidebar');
+        $navbar = $('.navbar');
+        $main_panel = $('.main-panel');
+
+        $full_page = $('.full-page');
+
+        $sidebar_responsive = $('body > .navbar-collapse');
+        sidebar_mini_active = true;
+        white_color = false;
+
+        window_width = $(window).width();
+
+        fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+        $('.switch-sidebar-mini input').on("switchChange.bootstrapSwitch", function() {
+          var $btn = $(this);
+
+          if (sidebar_mini_active == true) {
+            $('body').removeClass('sidebar-mini');
+            sidebar_mini_active = false;
+            blackDashboard.showSidebarMessage('Sidebar mini deactivated...');
+          } else {
+            $('body').addClass('sidebar-mini');
+            sidebar_mini_active = true;
+            blackDashboard.showSidebarMessage('Sidebar mini activated...');
+          }
+        });  
+
+
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/js/demos.js
+      demo.initDashboardPageCharts();
+
+    });
+  </script>
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+</body>
+
+</html>
