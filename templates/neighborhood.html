@@ -18,15 +18,80 @@
 </head>
 
 <body class="">
+
+  <div class="wrapper">
+    <div class="sidebar">
+      <div class="sidebar-wrapper">
+        <div class="logo">
+          <a href="javascript:void(0)" class="simple-text logo-mini">
+            TRT
+          </a>
+          <a href="javascript:void(0)" class="simple-text logo-normal">
+            Crime Rate
+          </a>
+        </div>
+        <ul class="nav">
+          <li class="active ">
+            <a href="./index.html">
+              <i class="tim-icons icon-chart-pie-36"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li>
+            <a href="./neighborhood.html">
+              <i class="tim-icons icon-map-big"></i>
+              <p>Neighborhood Crime</p>
+            </a>
+          </li>
+          <li>
+            <a href="./day_and_night.html">
+              <i class="tim-icons icon-time-alarm"></i>
+              <p>Day/Night Crime Rate</p>
+            </a>
+          </li>
+          <li>
+            <a href="./table.html">
+              <i class="tim-icons icon-bullet-list-67"></i>
+              <p>Data Table</p>
+            </a>
+          </li>
+          <li>
+            <a href="./report.html">
+              <i class="tim-icons icon-paper"></i>
+              <p>Analysis Report</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <div class="main-panel">
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a href="./index.html">
-                <i class="tim-icons icon-chart-pie-36"></i>
-                <p>Dashboard</p>
-              </a>
+            <div class="navbar-toggle d-inline">
+              <button type="button" class="navbar-toggler">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </button>
+            </div>
+            <a class="navbar-brand" href="javascript:void(0)">Dashboard</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navigation">
+            <ul class="navbar-nav ml-auto">
+              <li class="search-bar input-group">
+                <button class="btn btn-link" id="search-button" data-toggle="modal" data-target="#searchModal"><i class="tim-icons icon-zoom-split" ></i>
+                  <span class="d-lg-none d-md-block">Search</span>
+                </button>
+              </li>
+              <li class="separator d-lg-none"></li>
+            </ul>
           </div>
         </div>
       </nav>
