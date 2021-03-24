@@ -18,6 +18,19 @@
 /*     brand Colors              */
 /* navbar color */
 
+#reportimg {
+  float: left ;
+}
+#reporttext {
+  float: right ;
+}
+
+#reportcontainer {
+  width: 900px ;
+  max-width: 100% ;
+  margin-left: auto ;
+  margin-right: auto ;
+}
 
 :root {
   --blue: #5e72e4;
@@ -4981,6 +4994,7 @@ input[type="button"].btn-block {
     display: none;
   }
 }
+
 
 @media (max-width: 1199.98px) {
 
