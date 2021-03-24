@@ -112,16 +112,17 @@
       
     <div class="content">
         <div class="row"> 
-            <h2 style="display:inline; color: white; text-align: center; text-shadow: 2px 2px 2px DarkSlateBlue; font-size: 50px">Predicting Trends</h2>
+            <h2 style="color: white; text-align: center; text-shadow: 2px 2px 2px DarkSlateBlue; font-size: 50px">Predicting Trends</h2>
             <br>
-            <p><img width="900" height="515" src="../images/fig1_predictions_chart.png" alt="Predicting Reported Crimes Trend"></p>
-            <hr style="height:50px">
+            <img style="display: block;" width="900" height="515" src="../images/fig1_predictions_chart.png" alt="Predicting Reported Crimes Trend" class="rounded main-image">
+            <br>
              <p>The purpose of this project is to attempt to see if there are reported crimes trends in Toronto.  The dataset is extracted from the Toronto Police Services website; from 2014 to 2020.
                 We look at daily reported crimes to see if there are any trends in the reported crimes counts.  We decided to use Facebook Prophet to see if we can predict what the trend could be.
+                
                 First extracted the dataset as a csv than used Pyspark to cleasn the data.  Data cleasing include converting the dates column to datatime format; than drop duplicate records; than lastly
                 we group and count each daily reported crime date to creating a unique record to get columns "ds" and "y" to run Facebook Prophet. Next, the Pyspark data is converted to a Pandas Dataframe
                 and checked for missing values.  The data is than model and the following table show the future values that was charted.</p>
-            <hr style="height:30px">
+            <br>
             <img width="900" height="515" src="../images/prediction_values_table.png" alt="Predictions Values Table" class="rounded main-image">
             <br>
             <p> From fig1. Predictions of Reported Crimes, the light blue depicted by (yhat_lower and yhat_upper) show the uncertainty range of the data while the dark blue (yhat) is the prediction range.  
@@ -131,7 +132,7 @@
         </div>
 
         <div class="row"> 
-            <h3 style="display:inline; color: white; text-align: center; text-shadow: 2px 2px 2px DarkSlateBlue; font-size: 50px">Seasonality Components</h3>
+            <h3 style="color: white; text-align: center; text-shadow: 2px 2px 2px DarkSlateBlue; font-size: 50px">Seasonality Components</h3>
             <br>
             <img width="900" height="515" src="../images/fig2_components_charts.png" alt="Seasonality Components Charts" class="rounded main-image">
             <br>
@@ -144,7 +145,7 @@
         </div>
 
         <div class="row"> 
-            <h3 style="display:inline; color: white; text-align: center; text-shadow: 2px 2px 2px DarkSlateBlue; font-size: 50px">Data Changepoints</h3>
+            <h3 style="color: white; text-align: center; text-shadow: 2px 2px 2px DarkSlateBlue; font-size: 50px">Data Changepoints</h3>
             <hr class="plots">
             <img width="900" height="515" src="../images/fig3_changepoints_chart.png" alt="Changepoint Chart" class="rounded main-image">
             <hr>
@@ -155,7 +156,7 @@
         </div>
 
         <div class="row"> 
-            <h3 style="display:inline; color: white; text-align: center; text-shadow: 2px 2px 2px DarkSlateBlue; font-size: 50px">Comparing Trends</h3>
+            <h3 style="color: white; text-align: center; text-shadow: 2px 2px 2px DarkSlateBlue; font-size: 50px">Comparing Trends</h3>
             <hr class="plots">
             <img width="900" height="515" src="../images/fig4_actual_vs_predictions_chart.png" alt="Actual vs Predictions" class="rounded main-image">
             <hr>
