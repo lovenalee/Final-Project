@@ -49,7 +49,7 @@
         <div class="col-sm-12 col-md-8 col-lg-8 card-padding card-padding3"> 
             <h2 style="color: white; text-align: center; text-shadow: 2px 2px 2px DarkSlateBlue; font-size: 50px">Predicting Trends</h2>
             <hr class="plots">
-            <img width="760" height="515" src="../images/fig1_predictions_chart.png" alt="Predicting Reported Crimes Trend" class="rounded main-image">
+            <img width="900" height="515" src="../images/fig1_predictions_chart.png" alt="Predicting Reported Crimes Trend" class="rounded main-image">
             <hr>
              <p>The purpose of this project is to attempt to see if there are reported crimes trends in Toronto.  The dataset is extracted from the Toronto Police Services website; from 2014 to 2020.
                 We look at daily reported crimes to see if there are any trends in the reported crimes counts.  We decided to use Facebook Prophet to see if we can predict what the trend could be.
@@ -58,7 +58,7 @@
                 we group and count each daily reported crime date to creating a unique record to get columns "ds" and "y" to run Facebook Prophet. Next, the Pyspark data is converted to a Pandas Dataframe
                 and checked for missing values.  The data is than model and the following table show the future values that was charted.</p>
             <hr>
-            <img width="760" height="515" src="../images/prediction_values_table.png" alt="Predictions Values Table" class="rounded main-image">
+            <img width="900" height="515" src="../images/prediction_values_table.png" alt="Predictions Values Table" class="rounded main-image">
             <hr>
             <p> From fig1. Predictions of Reported Crimes, the light blue depicted by (yhat_lower and yhat_upper) show the uncertainty range of the data while the dark blue (yhat) is the prediction range.  
                 With a few expected outliers and its lower and upper bounds we see the predicted data is close to the actual data with an upward trend.  This suggest the model should be relatively 
@@ -69,7 +69,7 @@
         <div class="col-sm-12 col-md-8 col-lg-8 card-padding card-padding3"> 
             <h3 style="color: white; text-align: center; text-shadow: 2px 2px 2px DarkSlateBlue; font-size: 50px">Seasonality Components</h3>
             <hr class="plots">
-            <img width="760" height="515" src="../images/fig2_components_charts.png" alt="Seasonality Components Charts" class="rounded main-image">
+            <img width="900" height="515" src="../images/fig2_components_charts.png" alt="Seasonality Components Charts" class="rounded main-image">
             <hr>
             <p> Fig2. show the different seasonality components to the daily reported crimes. The first plot further prove the upward trend of the prediction.  Here we see a change in the data in 2017
                 from relatively flat to an increasing trend.  The next plot show daily reported crimes throughout the week.  Interestingly, the plot show there are more reported crimes on Mondays and Fridays;
@@ -82,7 +82,7 @@
         <div class="col-sm-12 col-md-8 col-lg-8 card-padding card-padding3"> 
             <h3 style="color: white; text-align: center; text-shadow: 2px 2px 2px DarkSlateBlue; font-size: 50px">Data Changepoints</h3>
             <hr class="plots">
-            <img width="760" height="515" src="../images/fig3_changepoints_chart.png" alt="Changepoint Chart" class="rounded main-image">
+            <img width="900" height="515" src="../images/fig3_changepoints_chart.png" alt="Changepoint Chart" class="rounded main-image">
             <hr>
             <p> Data changepoints is a function in Prophet that is used to indicate where the actual data changes direction from a flatter to increasing/decreasing range.  
                 Fig3. the dotted verticle lines show a flat range of reported crimes from 2014 to 2017; than begin to increase at around 2018. While the solid line show this flat to upward trend.
@@ -93,7 +93,7 @@
         <div class="col-sm-12 col-md-8 col-lg-8 card-padding card-padding3"> 
             <h3 style="color: white; text-align: center; text-shadow: 2px 2px 2px DarkSlateBlue; font-size: 50px">Comparing Trends</h3>
             <hr class="plots">
-            <img width="760" height="515" src="../images/fig4_actual_vs_predictions_chart.png" alt="Actual vs Predictions" class="rounded main-image">
+            <img width="900" height="515" src="../images/fig4_actual_vs_predictions_chart.png" alt="Actual vs Predictions" class="rounded main-image">
             <hr>
                 <p> Lastly, we want to visualize the actual vs the predicted data and see if the model is a good fit.  Fig4. show the comparison between the yearly actuals to the yearly predictions
                     from.  The chart show that the predictions orange lines are within the actual blue lines and the upward trend after 2017.  This model appear to be a good fit of the data.
