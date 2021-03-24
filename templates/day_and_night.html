@@ -1,1 +1,133 @@
-<iframe width="100%" height="1200" src="https://app.powerbi.com/reportEmbed?reportId=94b0bf71-bc0a-45f0-baae-c19c6ac07afb&autoAuth=true&ctid=0f8c5561-75cb-4080-9722-bc1f6a04358f&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLWNhbmFkYS1jZW50cmFsLWItcHJpbWFyeS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    Major Crimes by Time
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <!-- Nucleo Icons -->
+  <link href="../static/css/nucleo-icons.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="../static/css/style.css" rel="stylesheet" />
+
+</head>
+
+<body class="">
+
+  <div class="wrapper">
+    <div class="sidebar">
+      <div class="sidebar-wrapper">
+        <div class="logo">
+          <a href="javascript:void(0)" class="simple-text logo-mini">
+            TRT
+          </a>
+          <a href="javascript:void(0)" class="simple-text logo-normal">
+            Crime Rate
+          </a>
+        </div>
+        <ul class="nav">
+          <li class="active ">
+            <a href="./index.html">
+              <i class="tim-icons icon-chart-pie-36"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li>
+            <a href="./neighborhood.html">
+              <i class="tim-icons icon-map-big"></i>
+              <p>Neighborhood Crime</p>
+            </a>
+          </li>
+          <li>
+            <a href="./day_and_night.html">
+              <i class="tim-icons icon-time-alarm"></i>
+              <p>Day/Night Crime Rate</p>
+            </a>
+          </li>
+          <li>
+            <a href="./table.html">
+              <i class="tim-icons icon-bullet-list-67"></i>
+              <p>Data Table</p>
+            </a>
+          </li>
+          <li>
+            <a href="./report.html">
+              <i class="tim-icons icon-paper"></i>
+              <p>Analysis Report</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+
+      
+      <div class="content">
+        <div class = "header">
+          <h1 style="color: white; text-align: center; text-shadow: 2px 2px 2px DarkSlateBlue; font-size: 50px">Reported Crimes by Time</h1>
+        </div>
+        <div class="row">  
+            <iframe width="100%" height="1200" src="https://app.powerbi.com/reportEmbed?reportId=94b0bf71-bc0a-45f0-baae-c19c6ac07afb&autoAuth=true&ctid=0f8c5561-75cb-4080-9722-bc1f6a04358f&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLWNhbmFkYS1jZW50cmFsLWItcHJpbWFyeS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe> 
+        </div>
+        <br>  
+      </div>
+      <footer class="footer">
+
+      </footer>
+    </div>
+  </div>
+  
+  <script>
+    
+    $(document).ready(function() {
+      $().ready(function() {
+        $sidebar = $('.sidebar');
+        $navbar = $('.navbar');
+        $main_panel = $('.main-panel');
+
+        $full_page = $('.full-page');
+
+        $sidebar_responsive = $('body > .navbar-collapse');
+        sidebar_mini_active = true;
+        white_color = false;
+
+        window_width = $(window).width();
+
+        fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+        $('.switch-sidebar-mini input').on("switchChange.bootstrapSwitch", function() {
+          var $btn = $(this);
+
+          if (sidebar_mini_active == true) {
+            $('body').removeClass('sidebar-mini');
+            sidebar_mini_active = false;
+            blackDashboard.showSidebarMessage('Sidebar mini deactivated...');
+          } else {
+            $('body').addClass('sidebar-mini');
+            sidebar_mini_active = true;
+            blackDashboard.showSidebarMessage('Sidebar mini activated...');
+          }
+        });  
+
+
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/js/demos.js
+      demo.initDashboardPageCharts();
+
+    });
+  </script>
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+
+</body>
+
+</html>
