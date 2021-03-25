@@ -79,12 +79,12 @@
       <div id="reportcontainer">      
         <img id="reportimg" width="900" height="515" src="../images/fig1_predictions_chart.png" alt="Predicting Reported Crimes Trend">    
         <HR WIDTH="100%">   
-        <p id="reporttext" style="font-size:160%;">The purpose of this project is to attempt to see if there are reported crimes trends in Toronto.  The dataset is extracted from the Toronto Police Services website; from 2014 to 2020.
-            We look at daily reported crimes to see if there are any trends in the reported crimes counts.  We decided to use Facebook Prophet to see if we can predict what the trend could be.
+        <p id="reporttext" style="font-size:160%;">The purpose of this project is to analyze the reported crime trends in Toronto.  The dataset is extracted from the Toronto Police Services website; from 2014 to 2020.
+            We look at daily reported crimes to see if there are any trends in the number of reported crimes.  We decided to use Facebook Prophet to see if we can predict what these trends could be.
             
-            First extracted the dataset as a csv than used Pyspark to cleasn the data.  Data cleasing include converting the dates column to datatime format; than drop duplicate records; than lastly
-            we group and count each daily reported crime date to creating a unique record to get columns "ds" and "y" to run Facebook Prophet. Next, the Pyspark data is converted to a Pandas Dataframe
-            and checked for missing values.  The data is than model and the following table show the future values that was charted.
+            First we extracted the dataset as a csv than used PySpark to cleanse the data.  Data cleansing include converting the dates column to datatime format; dropping duplicate records; than grouping and counting
+            the daily reported crimes to create a unique record to get columns "ds" and "y" to run Facebook Prophet. Next, we converted the PySpark data to a Pandas Dataframe and checked for missing values.  
+            The data is than model and the following table is generated showing the future values that will be charted.
         </p>
       </div>
 
@@ -128,8 +128,8 @@
     
         <img id="reportimg" width="900" height="515" src="../images/fig3_changepoints_chart.png" alt="Changepoint Chart">
         <HR WIDTH="100%">
-        <p id="reporttext" style="font-size:160%;"> Data changepoints is a function in Prophet that is used to indicate where the actual data changes direction from a flatter to increasing/decreasing range.  
-            Fig3. the dotted verticle lines show a flat range of reported crimes from 2014 to 2017; than begin to increase at around 2018. While the solid line show this flat to upward trend.
+        <p id="reporttext" style="font-size:160%;"> Data changepoints is a function in Prophet that is used to indicate where the actual data changes direction from a flatter to an increasing/decreasing range.  
+            In fig3. the dotted verticle lines show wheere the flat range of reported crimes from 2014 to 2017 begin to increase at around mid 2017; and the solid red line show a flat to upward trend.
         </p>             
       </div>
 
@@ -143,8 +143,8 @@
         </div>     
         <img id="reportimg" width="900" height="515" src="../images/fig4_actual_vs_predictions_chart.png" alt="Actual vs Predictions">
         <HR WIDTH="100%"> 
-          <p id="reporttext" style="font-size:160%;"> Lastly, we want to visualize the actual vs the predicted data and see if the model is a good fit.  Fig4. show the comparison between the yearly actuals to the yearly predictions
-              from.  The chart show that the predictions orange lines are within the actual blue lines and the upward trend after 2017.  This model appear to be a good fit of the data.
+          <p id="reporttext" style="font-size:160%;"> Lastly, we want to visualize the actual vs the predicted data and see if the model is a good fit.  Fig4. show the comparison between the yearly actuals to yearly predictions.  
+            The chart shows the predictions orange lines are within the actual blue lines and is in an upward trend after 2017.  This model appear to be a good fit of the data.
           </p>            
       </div>
 
