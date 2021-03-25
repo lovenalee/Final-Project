@@ -1,5 +1,5 @@
 # Toronto Crime Analysis 
-<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
