@@ -11,9 +11,9 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <!-- Nucleo Icons -->
-  <link href="../static/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="static/css/nucleo-icons.css" rel="stylesheet" />
   <!-- CSS Files -->
-  <link href="../static/css/style.css" rel="stylesheet" />
+  <link href="static/css/style.css" rel="stylesheet" />
 
 </head>
 
@@ -32,31 +32,31 @@
         </div>
         <ul class="nav">
           <li class="active ">
-            <a href="./index.html">
+            <a href="index.html">
               <i class="tim-icons icon-chart-pie-36"></i>
               <p>Dashboard</p>
             </a>
           </li>
           <li>
-            <a href="./neighborhood.html">
+            <a href="templates/neighborhood.html">
               <i class="tim-icons icon-map-big"></i>
               <p>Neighborhood Crime</p>
             </a>
           </li>
           <li>
-            <a href="./day_and_night.html">
+            <a href="templates/day_and_night.html">
               <i class="tim-icons icon-time-alarm"></i>
               <p>Day/Night Crime Rate</p>
             </a>
           </li>
           <li>
-            <a href="./table.html">
+            <a href="templates/table.html">
               <i class="tim-icons icon-bullet-list-67"></i>
               <p>Data Table</p>
             </a>
           </li>
           <li>
-            <a href="./report.html">
+            <a href="templates/report.html">
               <i class="tim-icons icon-paper"></i>
               <p>Analysis Report</p>
             </a>
@@ -74,48 +74,7 @@
         <div class="row">
           <iframe width="100%" height="1650"<iframe width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=673b9cb9-ba1b-4d8e-93bd-877bbd81f75e&autoAuth=true&ctid=0f8c5561-75cb-4080-9722-bc1f6a04358f&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLWNhbmFkYS1jZW50cmFsLWItcHJpbWFyeS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D&filterPaneEnabled=false&navContentPaneEnabled=false" frameborder="0" allowFullScreen="true"></iframe>
         </div>
-        <br>
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="card card-chart">
-              <div class="card-header">
-                <h5 class="card-category">Crimes by Neighborhoods</h5>
-                <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary"></i> 763,215</h3>
-              </div>
-              <div class="card-body">
-                <div class="chart-area">
-                  <canvas id="chartLinePurple"></canvas>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card card-chart">
-              <div class="card-header">
-                <h5 class="card-category">Day/Night Crime Rate</h5>
-                <h3 class="card-title"><i class="tim-icons icon-delivery-fast text-info"></i> 3,500€</h3>
-              </div>
-              <div class="card-body">
-                <div class="chart-area">
-                  <canvas id="CountryChart"></canvas>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card card-chart">
-              <div class="card-header">
-                <h5 class="card-category">Analysis Report</h5>
-                <h3 class="card-title"><i class="tim-icons icon-send text-success"></i> 12,100K</h3>
-              </div>
-              <div class="card-body">
-                <div class="chart-area">
-                  <canvas id="chartLineGreen"></canvas>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    
 
       </div>
       <footer class="footer">
